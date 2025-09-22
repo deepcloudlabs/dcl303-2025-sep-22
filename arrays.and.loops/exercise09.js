@@ -14,3 +14,5 @@ function numeric_desc_order(x,y){ // partial order
 
 numbers.sort(numeric_desc_order); // dictionary order -> numeric order
 console.log(numbers);
+numbers.sort((x,y) => y-x);
+console.log(numbers);
