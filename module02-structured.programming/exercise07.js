@@ -4,11 +4,7 @@ for (let year of years) {
     if (year % 4 === 0) {
         if (year % 400 === 0) {
             is_leap_year = true;
-        } else if (year % 100 === 0) {
-            is_leap_year = false;
-        } else {
-            is_leap_year = true;
-        }
+        } else is_leap_year = year % 100 !== 0;
     }
     console.log(`${year} is${is_leap_year ? '' : ' NOT'} a leap year.`);
 }
