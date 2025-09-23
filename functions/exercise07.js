@@ -1,5 +1,5 @@
-function find_employees(employees, department , full_time, birth_year) {
-    if (arguments.length !== 3)
+function find_employees({employees, department= "IT" , full_time=false, birth_year=2000}) {
+    if (arguments.length !== 1)
         throw "You must provide exactly three parameters.";
     for (let arg of arguments){
         console.log(arg);
@@ -23,6 +23,9 @@ employees = [
     {"fullname": "hugo reyes", "department": "IT", "salary": 120000, "year": 1992, "fulltime": true}
 ];
 
-for (let employee of find_employees(employees,false,"IT")){
+for (let employee of find_employees({
+         employees // employees: employees
+      }))
+{
     console.log(employee);
 }
