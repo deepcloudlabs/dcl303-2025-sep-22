@@ -1,0 +1,18 @@
+{
+  "name": "reactive.programming",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "rxjs": "7.8.2",
+    "ws": "8.18.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deepcloudlabs/dcl303-2025-sep-22.git"
+  },
+  "private": true
+}
