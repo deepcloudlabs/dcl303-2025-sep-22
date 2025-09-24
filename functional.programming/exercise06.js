@@ -1,4 +1,3 @@
-// 10:00
 // find region populations
 const countries = require("./resources/countries.json");
 population_by_region =
