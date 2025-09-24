@@ -1,0 +1,17 @@
+{
+  "name": "event.driven.programming",
+  "version": "1.0.0",
+  "description": "",
+  "main": "exercise01.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "ws": "^8.18.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deepcloudlabs/dcl303-2025-sep-22.git"
+  },
+  "private": true
+}
