@@ -1,0 +1,83 @@
+const CONTINENTS = [
+    'Africa',
+    'Antarctica',
+    'Asia',
+    'Europe',
+    'North America',
+    'Oceania',
+    'South America'
+];
+
+const GOVERNMENT_FORMS = [
+    'Administrated by the UN',
+    'Autonomous Area',
+    'Co-administrated',
+    'Commonwealth of the US',
+    'Constitutional Monarchy',
+    'Constitutional Monarchy (Emirate)',
+    'Constitutional Monarchy, Federation',
+    'Dependent Territory of Norway',
+    'Dependent Territory of the UK',
+    'Dependent Territory of the US',
+    'Emirate Federation',
+    'Federal Republic',
+    'Federation',
+    'FooGovernmentForm',
+    'Independent Church State',
+    'Islamic Emirate',
+    'Islamic Republic',
+    'Monarchy',
+    'Monarchy (Emirate)',
+    'Monarchy (Sultanate)',
+    'Nonmetropolitan Territory of France',
+    'Nonmetropolitan Territory of New Zealand',
+    'Nonmetropolitan Territory of The Netherlands',
+    'Occupied by Marocco',
+    'Overseas Department of France',
+    'Parlementary Monarchy',
+    'Parliamentary Coprincipality',
+    'Part of Denmark',
+    "People'sRepublic",
+    'Republic',
+    'Socialistic Republic',
+    'Socialistic State',
+    'Special Administrative Region of China',
+    'Territorial Collectivity of France',
+    'Territory of Australia',
+    'US Territory'
+];
+
+const REGIONS =  [
+    'Antarctica',
+    'Australia and New Zealand',
+    'Baltic Countries',
+    'British Islands',
+    'Caribbean',
+    'Central Africa',
+    'Central America',
+    'Eastern Africa',
+    'Eastern Asia',
+    'Eastern Europe',
+    'FooRegion',
+    'Melanesia',
+    'Micronesia',
+    'Micronesia/Caribbean',
+    'Middle East',
+    'Nordic Countries',
+    'North America',
+    'Northern Africa',
+    'Polynesia',
+    'South America',
+    'Southeast Asia',
+    'Southern Africa',
+    'Southern Europe',
+    'Southern and Central Asia',
+    'Western Africa',
+    'Western Europe'
+];
+
+module.exports = {
+    CONTINENTS ,
+    GOVERNMENT_FORMS,
+    REGIONS
+};
