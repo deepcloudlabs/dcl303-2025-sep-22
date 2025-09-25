@@ -1,0 +1,19 @@
+{
+  "name": "modularity",
+  "version": "1.0.0",
+  "description": "",
+  "main": "application.js",
+  "type": "module",
+  "scripts": {
+    "app": "node application.js",
+    "exercise01": "node exercise01.js",
+    "exercise02": "node exercise02.js",
+    "test": "node app-test.js",
+    "deploy-azure": "deploy-azure.bat"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deepcloudlabs/dcl303-2025-sep-22.git"
+  },
+  "private": true
+}
