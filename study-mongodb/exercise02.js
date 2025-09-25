@@ -1,0 +1,1 @@
+db.countries1.distinct("continent");
