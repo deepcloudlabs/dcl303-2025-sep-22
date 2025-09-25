@@ -69,9 +69,11 @@ const CountrySchema = new Schema({
 });
 
 const CountryModel = model("countries1", CountrySchema);
-
+function get_country_model(){
+    return CountryModel;
+}
 module.exports = {
-    CountryModel,
+    get_country_model,
     CitySchema,
     CountrySchema
 }
