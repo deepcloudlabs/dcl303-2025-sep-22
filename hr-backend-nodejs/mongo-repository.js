@@ -14,7 +14,7 @@ const get_all_employees = async (page_no=0,page_size=10) => {
     });
 };
 
-const hire_employee = async (employee) => {
+const hire_employee = (employee) => {
   const employee_document = new EmployeeModel(employee) ;
   return employee_document.save();
 };

@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "middleware": "node server.js"
+    "middleware": "node hr-api.js"
   },
   "dependencies": {
     "mongoose": "^8.18.2",

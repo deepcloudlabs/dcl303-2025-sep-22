@@ -52,7 +52,9 @@ const is_updatable_field = (field) => updatable_fields.includes(field);
 
 const EmployeeModel = model("employees", EmployeeSchema);
 
-const get_employee_model = () => EmployeeModel;
+const get_employee_model = () => {
+    return EmployeeModel;
+};
 
 module.exports = {
     get_employee_model,
