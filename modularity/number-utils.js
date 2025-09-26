@@ -2,9 +2,7 @@ function is_even(n) {
     return n % 2 === 0;
 }
 
-function is_odd(n) {
-    return n % 2 !== 0;
-}
+const is_odd = (n) => n % 2 === 0;
 
 function* get_evens(...numbers){
     for (const number of numbers){

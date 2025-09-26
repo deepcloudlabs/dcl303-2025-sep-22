@@ -5,6 +5,9 @@ Modularity in Javascript:
 
 2. ESM (ecmascript 6  ES6/ES2015 modularity)
    import -> loads modules -> asynchronous
-   export
+   defining modules: export
    nodejs supports both modularity
    modern browsers support ESM
+
+   package.json -> "type": "commonjs" -> default/cjs
+                   "type": "module" -> esm
