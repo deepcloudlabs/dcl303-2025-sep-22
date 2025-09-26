@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "middleware": "node hr-api.js"
+    "middleware": "node --env-file=.env-hr server.js"
   },
   "dependencies": {
     "mongoose": "^8.18.2",
