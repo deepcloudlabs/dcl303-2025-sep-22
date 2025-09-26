@@ -12,6 +12,7 @@ const {
 } = require("./mongo-repository");
 
 const api = express();
+let sessions = [];
 
 const create_api = (port = 8100, callback) => {
     api.use(body_parser.json({limit: '10mb'}));
@@ -31,6 +32,12 @@ const create_api = (port = 8100, callback) => {
         hire_employee(employee).then(hired_employee => {
             res.set("Content-Type", "application/json");
             res.status(200).send(JSON.stringify(hired_employee));
+            sessions.forEach(session => {
+                io.emit("hr-events", JSON.stringify({
+                    type: "hired_employee",
+                    data: hired_employee
+                }));
+            });
         }).catch(error => {
             console.error(error);
             res.set("Content-Type", "application/json");
@@ -45,6 +52,12 @@ const create_api = (port = 8100, callback) => {
         update_employee(new_employee).then(updated_employee => {
             res.set("Content-Type", "application/json");
             res.status(200).send(JSON.stringify(updated_employee));
+            sessions.forEach(session => {
+                io.emit("hr-events", JSON.stringify({
+                    type: "updated_employee",
+                    data: updated_employee
+                }));
+            });
         }).catch(error => {
             console.error(error);
             res.set("Content-Type", "application/json");
@@ -59,6 +72,12 @@ const create_api = (port = 8100, callback) => {
         update_employee(new_employee).then(updated_employee => {
             res.set("Content-Type", "application/json");
             res.status(200).send(JSON.stringify(updated_employee));
+            sessions.forEach(session => {
+                io.emit("hr-events", JSON.stringify({
+                    type: "updated_employee",
+                    data: new_employee
+                }));
+            });
         }).catch(error => {
             console.error(error);
             res.set("Content-Type", "application/json");
@@ -97,6 +116,12 @@ const create_api = (port = 8100, callback) => {
         fire_employee(identity).then(fired_employee => {
             res.set("Content-Type", "application/json");
             res.status(200).send(JSON.stringify(fired_employee));
+            sessions.forEach(session => {
+                io.emit("hr-events", JSON.stringify({
+                    type: "fired_employee",
+                    data: fired_employee
+                }));
+            });
         })
     });
 //endregion
@@ -105,6 +130,16 @@ const create_api = (port = 8100, callback) => {
     const contract = require("./swagger-hr-api.json");
     api.use("/api-docs", swaggerUi.serve, swaggerUi.setup(contract));
     const server = api.listen(port, callback);
+    const io = require("socket.io")(server, {
+        cors: "*",
+        "methods": ["GET", "POST", "PUT", "PATCH", "DELETE"]
+    });
+    io.on("connection", session => {
+        sessions.push(session);
+        io.on("disconnect", (session) => {
+            sessions = sessions.filter(session => session.id !== session.id);
+        })
+    })
 }
 //endregion
 
